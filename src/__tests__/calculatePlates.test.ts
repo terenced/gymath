@@ -25,7 +25,12 @@ describe('calculatePlates', () => {
       expect(calculatePlates(405)).toEqual({ 45: 4 });
       expect(calculatePlates(495)).toEqual({ 45: 5 });
     });
+    it('should return the correct plates for the given weight with a different bar weight', () => {
+      expect(calculatePlates(55, { barWeight: 55 })).toEqual({});
+      expect(calculatePlates(135, { barWeight: 35 })).toEqual({ 45: 1, 5: 1 });
+    });
   });
+
   describe('limited inventory', () => {
     it('should make use of inventory', () => {
       const inventory = [
