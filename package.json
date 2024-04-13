@@ -39,6 +39,7 @@
     "url": "https://github.com/terenced/gymath"
   },
   "license": "MIT",
+  "publishConfig": {"access": "public"},
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@eslint/js": "^8.56.0",
