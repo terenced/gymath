@@ -9,3 +9,4 @@ runs:
         node-version: 20.x
     - uses: pnpm/action-setup@v2.2.4
     - run: pnpm install --frozen-lockfile
+      shell: bash
