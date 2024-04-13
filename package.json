@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prettier:check": "prettier --check src/**/*.ts deno/lib/**/*.ts *.md --no-error-on-unmatched-pattern",
-    "prettier:fix": "prettier --write src/**/*.ts deno/lib/**/*.ts *.md --ignore-unknown --no-error-on-unmatched-pattern",
+    "prettier:check": "prettier --check src/**/*.ts --no-error-on-unmatched-pattern",
+    "prettier:fix": "prettier --write src/**/*.ts --ignore-unknown --no-error-on-unmatched-pattern",
     "lint": "eslint ./src",
     "lint:fix": "eslint --cache --fix ./src",
     "check": "pnpm lint && pnpm prettier:check",
