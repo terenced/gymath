@@ -18,7 +18,8 @@
     "build:test": "tsc -p ./configs/tsconfig.test.json",
     "test:watch": "pnpm run test --watchAll",
     "test": "jest",
-    "prepublishOnly": "pnpm run test && pnpm run build"
+    "changeset:version": "changeset version && pnpm -r generate:version && git add --all",
+    "changeset:publish": "changeset publish"
   },
   "exports": {
     ".": {
@@ -34,11 +35,12 @@
   ],
   "author": "Terry Dellino <td@superbeta.dev>",
   "repository": {
-    "type": "git", 
+    "type": "git",
     "url": "https://github.com/terenced/gymath"
   },
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@eslint/js": "^8.56.0",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/jest": "^29.5.12",
